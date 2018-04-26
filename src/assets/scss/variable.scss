@@ -1,0 +1,117 @@
+/*
+Template Name: Elite Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,300,600,700');
+
+$bodyfont: 'Poppins', sans-serif;
+$headingfont: 'Poppins', sans-serif;
+
+/*Theme Colors*/
+
+$topbar: #3c4451;
+$sidebar: #fff;
+$bodycolor: #edf1f5;
+$headingtext: #2b2b2b;
+$bodytext: #686868; 
+$sidebar-text: #54667a;
+$themecolor: #ff6849;
+$themecolor-dark: #4F5467;
+
+$sidebar-icons: #54667a;
+$sidebar-white: #e5edef;
+$sidebar-alt:#edf0f5;
+$light-text: #a6b7bf;
+$themecolor-alt: #26c6da;
+
+/*bootstrap Color*/
+
+$danger: #fb9678;
+$success: #00c292;
+$warning: #fec107;
+$primary: #7460ee;
+$info: #03a9f3; 
+$inverse: #4c5667;
+$secondary: #cccccc;
+$muted: #98a6ad;
+$dark: #2b2b2b;
+$light: #f3f5f7;
+$extra-light: #f7fafc;
+$bglight:rgba(0, 0, 0, 0.02);
+
+
+/*Light colors*/
+$light-danger: #f9e7eb;
+$light-success: #e8fdeb;
+$light-warning: #fff8ec;
+$light-primary: #f1effd;
+$light-info: #cfecfe;
+$light-inverse: #f6f6f6;
+$light-megna: #e0f2f4; 
+
+
+
+$danger-dark: #e6294b;
+$success-dark: #04b381;
+$warning-dark: #e9ab2e;
+$primary-dark: #6352ce;
+$info-dark: #028ee1;
+$red-dark: #d61f1f;
+$inverse-dark: #232a37;
+$dark-transparent:rgba(0, 0, 0, 0.05);
+
+
+
+/*Normal Color*/
+$white: #ffffff;
+$red: #fb3a3a;
+$yellow: #a0aec4;
+$purple: #7460ee;
+$blue: #02bec9;
+$megna: #01c0c8;
+
+/*Extra Variable*/
+$rgt: right;
+$lft: left;
+$border: rgba(120, 130, 140, 0.13);
+$table-border:#f3f1f1;
+$card-brd:#d7dfe3;
+$dark-text: #848a96;
+$radius: 4px;
+$form-brd: #b1b8bb;
+$card-border-radius: 0px !default;
+$progress-height:                   auto !default;
+$gray-1000: #ced4da;
+
+$theme-colors: (
+  
+  secondary:                      $gray-1000,
+  success:                        $success,
+  info:                           $info,
+  warning:                        $warning,
+  danger:                         $danger,
+  light:                          $light,
+  cyan:                           $megna,
+  dark:                           $inverse,
+  purple:                         $purple    
+);
+/*Preloader*/
+
+.preloader{
+    width: 100%;
+    height: 100%;
+    top:0px;
+    position: fixed;
+    z-index: 99999;
+    background: #fff;
+    .cssload-speeding-wheel{
+        position: absolute;
+        top: calc(50% - 3.5px);
+        left: calc(50% - 3.5px);
+    }
+}
+

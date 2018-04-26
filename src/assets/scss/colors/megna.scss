@@ -1,0 +1,123 @@
+/*
+Template Name: Elite Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: scss
+*/
+
+@import '../variable';
+$themecolor: #01c0c8;
+$themecolor-dark: #4F5467;
+$topbar: #01c0c8;
+
+.megna {
+
+    .topbar {
+        background: $topbar;
+        .navbar-header {
+            background: $white;
+        }
+        .top-navbar .navbar-header .navbar-brand .light-logo {
+            display: none;
+            color:rgba(255, 255, 255, 0.8);
+        }
+        .navbar-light .navbar-nav .nav-item > {
+            a.nav-link {
+                color: $white!important;
+                &:hover,
+                &:focus {
+                    color: rgba(255, 255, 255, 0.8)!important;
+                }
+            }
+        }
+    }
+
+    a.link {
+        &:hover,
+        &:focus {
+            color: $themecolor!important;
+        }
+    }
+
+    .bg-theme {
+        background-color: $themecolor !important;
+    }
+
+    .pagination > .active > a,
+    .pagination > .active > span,
+    .pagination > .active > a:hover,
+    .pagination > .active > span:hover,
+    .pagination > .active > a:focus,
+    .pagination > .active > span:focus {
+        background-color: $themecolor;
+        border-color: $themecolor;
+    }
+
+    .right-sidebar {
+        .rpanel-title {
+            background: $themecolor;
+        }
+    }
+
+    .page-titles .breadcrumb .active{
+        color: $themecolor;
+    }
+
+    .lstick {
+        background: $themecolor;
+    }
+
+    .stylish-table {
+        tbody tr {
+            &:hover,
+            &.active {
+                border-left: 4px solid $themecolor;
+            }
+        }
+    }
+
+    .text-themecolor{
+        color:$themecolor!important;
+    }
+
+    .btn-themecolor,
+    .btn-themecolor.disabled {
+        background: $themecolor;
+        color: $white;
+        border: 1px solid $themecolor;
+        &:hover {
+            background: $themecolor;
+            opacity: 0.7;
+            border: 1px solid $themecolor;
+        }
+        &.active,
+        &:focus {
+            background: $themecolor-dark;
+        }
+    }
+
+    .label-themecolor{
+        background:$themecolor; 
+    }
+
+    .sidebar-nav {
+        ul li a {
+            &.router-link-active,
+            &:hover {
+              color: $themecolor;
+              i {
+                color: $themecolor;
+              }    
+            }
+        }
+        > ul > li {
+            &.active > a {
+                color: $themecolor;
+                border-left: 3px solid $themecolor;
+                i {
+                    color: $themecolor;
+                }
+            }
+        }
+    }
+}
