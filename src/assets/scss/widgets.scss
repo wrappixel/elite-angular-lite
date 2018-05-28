@@ -105,6 +105,17 @@ File: scss
 }
 
 
+/*******************
+/*Analytic info sparkline chart page*/
+/*******************/
+
+.analytics-info {
+    li span {
+        font-size: 24px;
+        vertical-align: middle;
+    }
+}
+
 
 /*******************
 /*States row*/
@@ -123,6 +134,31 @@ File: scss
 }
 
 
+/*******************/
+/*Dashboard1 Weather*/
+/*******************/
+
+.city-weather-days {
+    margin: 0px;
+    li {
+        text-align: center;
+        padding: 15px 0;
+        span {
+            display: block;
+            padding: 10px 0 0;
+            color: $muted;
+        }
+        i {
+            display: block;
+            font-size: 20px;
+            color: $themecolor;
+        }
+        h3 {
+            font-weight: 300;
+            margin-top: 5px;
+        }
+    }
+}
 
 
 /*******************/
@@ -225,6 +261,96 @@ File: scss
 }
 
 
+/*******************/
+/*Chat widget*/
+/*******************/
+
+.chat-list {
+    margin: 0px;
+    padding: 0px;
+    li {
+        list-style: none;
+        margin-top: 30px;
+        .chat-img {
+            display: inline-block;
+            width: 45px;
+            vertical-align: top;
+            img {
+                width: 45px;
+                border-radius: 100%;
+            }
+        }
+        .chat-content {
+            width: calc(100% - 140px);
+            display: inline-block;
+            padding-left: 15px;
+            h5 {
+                color: $dark;
+            }
+            .box {
+                display: inline-block;
+                margin-bottom: 10px;
+                position:relative;
+                &:after{
+                    right: 99%;
+                    top: 0;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    border-top-color: $light-info;
+                    border-width: 8px;
+                    margin-left: -1px;
+                    border-right-color: $light-info    
+                }
+            }
+        }
+        .chat-time {
+            display: block;
+            text-align: right;
+            width: 80px;
+            margin-left:28px;
+            font-size: 10px;
+            color: $muted;
+        }
+        &.odd {
+            .chat-content {
+                text-align: right;
+                width: calc(100% - 90px);
+            }
+            .box {
+                clear: both;
+
+            }
+        }
+        &.odd + .odd {
+            margin-top: 0px;
+        }
+        &.reverse {
+            text-align: right;
+            .box{
+                &:after{
+                        left:99%;
+                        right:auto;
+                        border-right-color:transparent;
+                        border-left-color:$light-inverse;
+                        border-top-color:$light-inverse;
+                }    
+            }
+            .chat-time {
+                text-align: right;
+                margin-left:auto;
+                margin-right:65px;
+            }
+            .chat-content {
+                padding-left: 0px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
 
 
 /*******************/
@@ -313,6 +439,167 @@ File: scss
 }
 
 
+/*******************/
+/*Calendar widget*/
+/*******************/
+
+.calendar {
+    float: $lft;
+    margin-bottom: 0px;
+}
+
+.fc-view {
+    margin-top: 30px;
+}
+
+.none-border {
+    .modal-footer {
+        border-top: none;
+    }
+}
+
+.fc-toolbar {
+    margin-bottom: 5px;
+    margin-top: 15px;
+    h2 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 30px;
+        text-transform: uppercase;
+    }
+}
+
+.fc-day {
+    background: $white;
+}
+
+.fc-toolbar .fc-state-active,
+.fc-toolbar .ui-state-active,
+.fc-toolbar button:focus,
+.fc-toolbar button:hover,
+.fc-toolbar .ui-state-hover {
+    z-index: 0;
+}
+
+.fc-widget-header {
+    border: 0px !important;
+}
+
+.fc-widget-content {
+    border-color: rgba(120, 130, 140, 0.13)!important;
+}
+
+.fc {
+    th.fc-widget-header {
+        color: $bodytext;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 20px;
+        padding: 7px 0px;
+        text-transform: uppercase;
+    }
+    th.fc-sun,
+    th.fc-tue,
+    th.fc-thu,
+    th.fc-sat {
+        background: #f2f7f8;
+    }
+    th.fc-mon,
+    th.fc-wed,
+    th.fc-fri {
+        background: #f2f7f8;
+    }
+}
+
+.fc-view {
+    margin-top: 0px;
+}
+
+.fc-toolbar {
+    margin: 0px;
+    padding: 24px 0px;
+}
+
+.fc-button {
+    background: $white;
+    border: 1px solid $border;
+    color: $bodytext;
+    text-transform: capitalize;
+    &:hover {
+        background: $light;
+        opacity: 0.8;
+    }
+}
+
+.fc-text-arrow {
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.fc-state-hover {
+    background: #F5F5F5;
+}
+
+.fc-unthemed .fc-today {
+    border: 1px solid $danger;
+    background: $light!important;
+}
+
+.fc-state-highlight {
+    background: #f0f0f0;
+}
+
+.fc-cell-overlay {
+    background: #f0f0f0;
+}
+
+.fc-unthemed {
+    .fc-today {
+        background: $white;
+    }
+}
+
+.fc-event {
+    border-radius: 0px;
+    border: none;
+    cursor: move;
+    color: $white!important;
+    font-size: 13px;
+    margin: 1px -1px 0 -1px;
+    padding: 5px 5px;
+    text-align: center;
+    background: $info;
+}
+
+.calendar-event {
+    cursor: move;
+    margin: 10px 5px 0 0;
+    padding: 6px 10px;
+    display: inline-block;
+    color: $white;
+    min-width: 140px;
+    text-align: center;
+    background: $info;
+    a {
+        float: $rgt;
+        opacity: 0.6;
+        font-size: 10px;
+        margin: 4px 0 0 10px;
+        color: $white;
+    }
+}
+
+.fc-basic-view {
+    td.fc-week-number {
+        span {
+            padding-right: 5px;
+        }
+    }
+    .fc-day-number {
+        padding: 10px 15px;
+        display: inline-block;
+    }
+}
 /*******************/
 /*Steam line widget*/
 /*******************/
@@ -492,6 +779,21 @@ File: scss
 
 
 /*******************/
+/*Guage chart*/
+/*******************/
+
+.gaugejs-box {
+    position: relative;
+    margin: 0 auto;
+}
+
+.gaugejs-box canvas.gaugejs {
+    width: 100% !important;
+    height: auto !important;
+}
+
+
+/*******************/
 /*social-profile-first*/
 /*******************/
 
@@ -609,22 +911,26 @@ File: scss
     }
 }
 
-
+/*Weather smal;*/
+.weather-small{
+    h1{
+        line-height: 30px;
+    }
+    sup{
+        font-size:60%;
+    }
+}
 
 /*little-profile*/
 .little-profile{
     .pro-img{
+        margin-top: -80px;
         margin-bottom: 20px;
         img{
             width:128px;
             height: 128px;
             box-shadow: 0 0 15px rgba(0, 0, 0,0.2);
             border-radius: 100%;
-        }
-    }
-    .soc-pro {
-        a {
-            color: $muted;
         }
     }
 }

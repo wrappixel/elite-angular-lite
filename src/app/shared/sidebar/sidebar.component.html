@@ -1,56 +1,102 @@
-<!-- User profile -->
-<div class="user-profile">
-  <!-- User profile image -->
-  <div class="profile-img"> <img src="assets/images/users/profile.png" alt="user" />
-  </div>
-  <!-- User profile text-->
-  <div class="profile-text">
-    <a ngbDropdownToggle ngbDropdown href="javascript:void(0)" class="u-dropdown">Steave Gection <i class="fa fa-angle-down"></i>
-            <div class="dropdown-menu animated flipInY" ngbDropdownMenu>
-                <a href="#" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
-    <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a>
-    <a href="#" class="dropdown-item"><i class="ti-email"></i> Inbox</a>
-    <div class="dropdown-divider"></div>
-    <a href="#" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
-    <div class="dropdown-divider"></div>
-    <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
-  </div>
-  </a>
-</div>
-</div>
-<!-- End User profile text-->
-<nav class="sidebar-nav">
-  <ul id="sidebarnav">
-    <!-- First level menu -->
-    <li [class.active]="showMenu === sidebarnavItem.title" *ngFor="let sidebarnavItem of sidebarnavItems" [routerLinkActive]="sidebarnavItem.submenu.length != 0 ? '' : 'active'">
-      <div class="nav-small-cap" *ngIf="sidebarnavItem.extralink === true">{{sidebarnavItem.title}}</div>
-      <a [routerLink]="sidebarnavItem.class === '' ? [sidebarnavItem.path] : null" [ngClass]="[sidebarnavItem.class]" *ngIf="!sidebarnavItem.extralink;" (click)="addExpandClass(sidebarnavItem.title)">
-                <i [ngClass]="[sidebarnavItem.icon]"></i>
-                <span class="hide-menu">{{sidebarnavItem.title}}
-                <span *ngIf="sidebarnavItem.label != '' " [ngClass]="[sidebarnavItem.labelClass]">{{sidebarnavItem.label}}</span>
-                </span>    
-            </a>
-      <!-- Second level menu -->
-      <ul class="collapse" *ngIf="sidebarnavItem.submenu.length > 0" [ngClass]="{'in' : showMenu === sidebarnavItem.title }">
-        <li *ngFor="let sidebarnavSubItem of sidebarnavItem.submenu" [class.active]="showSubMenu === sidebarnavSubItem.title" [routerLinkActive]="sidebarnavSubItem.submenu.length > 0 ? '' : 'active'">
-          <a [routerLink]="sidebarnavSubItem.submenu.length > 0 ? null : [sidebarnavSubItem.path]" [routerLinkActive]="sidebarnavSubItem.submenu.length > 0 ? '' : 'router-link-active'" [ngClass]="[sidebarnavSubItem.class]" *ngIf="!sidebarnavSubItem.extralink;" (click)="addActiveClass(sidebarnavSubItem.title)">
-                        <i [ngClass]="[sidebarnavSubItem.icon]"></i>
-                        {{sidebarnavSubItem.title}}
-                    </a>
-          <!-- Third level menu -->
-          <ul class="collapse" *ngIf="sidebarnavSubItem.submenu.length > 0" [ngClass]="{'in' : showSubMenu === sidebarnavSubItem.title }">
-            <li *ngFor="let sidebarnavSubsubItem of sidebarnavSubItem.submenu" routerLinkActive="active" [ngClass]="[sidebarnavSubsubItem.class]">
-              <a [routerLink]="[sidebarnavSubsubItem.path]" *ngIf="!sidebarnavSubsubItem.extralink;" [routerLinkActive]="sidebarnavSubsubItem.submenu.length > 0 ? '' : 'router-link-active'">
-                                <i [ngClass]="[sidebarnavSubsubItem.icon]"></i>
-                                {{sidebarnavSubsubItem.title}}
-                            </a>
-            </li>
-          </ul>
+<!-- ============================================================== -->
+<!-- Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->
+<aside class="left-sidebar">
+  <!-- Sidebar scroll-->
+  <div class="scroll-sidebar">
+    <!-- User profile -->
+    <div class="user-profile">
+      <!-- User profile image -->
+      <div class="profile-img"> <img src="assets/images/users/profile.png" alt="user" />
+        <!-- this is blinking heartbit-->
+        <div class="notify setpos"> <span class="heartbit"></span> <span class="point"></span> </div>
+      </div>
+      <!-- User profile text-->
+      <div class="profile-text">
+        <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Markarn Doe <i class="fa fa-angle-down"></i></a>
+        <div class="dropdown-menu animated flipInY">
+          <!-- text-->
+          <a href="#" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+          <!-- text-->
+          <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a>
+          <!-- text-->
+          <a href="#" class="dropdown-item"><i class="ti-email"></i> Inbox</a>
+          <!-- text-->
+          <div class="dropdown-divider"></div>
+          <!-- text-->
+          <a href="#" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
+          <!-- text-->
+          <div class="dropdown-divider"></div>
+          <!-- text-->
+          <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
+          <!-- text-->
+        </div>
+      </div>
+    </div> 
+    <!-- End User profile text-->
+    <!-- Sidebar navigation-->
+    <nav class="sidebar-nav">
+      <ul id="sidebarnav">
+        <li class="nav-devider"></li>
+        <li class="nav-small-cap">MENU</li>
+        <li [class.active]="showMenu === 'start'">
+            <a routerLink="/starter" (click)="addExpandClass('start')" [routerLinkActive]="['router-link-active']"><i class="icon-speedometer"></i><span class="hide-menu">Starter Page</span></a>
+        </li>
+        <li [class.active]="showMenu === 'component'">
+            <a class="has-arrow" href="javascript:void(0)" (click)="addExpandClass('component')" aria-expanded="false"><i class="icon-bulb"></i><span class="hide-menu">Component</span></a>
+            <ul aria-expanded="false" class="collapse" [class.in]="showMenu === 'component'">
+                <li><a routerLink="/accordion" [routerLinkActive]="['router-link-active']">Accordion</a></li>
+                <li><a routerLink="/alert" [routerLinkActive]="['router-link-active']">Alert</a></li>
+                <li><a routerLink="/carousel" [routerLinkActive]="['router-link-active']">Carousel</a></li>
+                <li><a routerLink="/datepicker" [routerLinkActive]="['router-link-active']">Datepicker</a></li>
+                <li><a routerLink="/dropdown" [routerLinkActive]="['router-link-active']">Dropdown - Collapse</a></li>
+                <li><a routerLink="/modal" [routerLinkActive]="['router-link-active']">Modal</a></li>
+                <li><a routerLink="/pagination" [routerLinkActive]="['router-link-active']">Pagination</a></li>
+                <li><a routerLink="/poptool" [routerLinkActive]="['router-link-active']">Popover & Tooltip</a></li>
+                <li><a routerLink="/progressbar" [routerLinkActive]="['router-link-active']">Progressbar</a></li>
+                <li><a routerLink="/rating" [routerLinkActive]="['router-link-active']">Ratings</a></li>
+                <li><a routerLink="/tabs" [routerLinkActive]="['router-link-active']">Tabs</a></li>
+                <li><a routerLink="/timepicker" [routerLinkActive]="['router-link-active']">Timepicker</a></li>
+                <li><a routerLink="/typehead" [routerLinkActive]="['router-link-active']">Typehead</a></li>
+            </ul>
+        </li>
+        <li [class.active]="showMenu === 'fomrs'">
+            <a routerLink="/basicform" (click)="addExpandClass('fomrs')" [routerLinkActive]="['router-link-active']"><i class="icon-doc"></i><span class="hide-menu">Forms</span></a>
+        </li>
+        <li [class.active]="showMenu === 'tables'">
+            <a routerLink="/basictable" (click)="addExpandClass('tables')" [routerLinkActive]="['router-link-active']"><i class="mdi mdi-table"></i><span class="hide-menu">Tables</span></a>
+        </li>  
+        <li [class.active]="showMenu === 'icons'">
+            <a class="has-arrow" href="javascript:void(0)" aria-expanded="false" (click)="addExpandClass('icons')" ><i class="icon-pencil"></i><span class="hide-menu">Icons</span></a>
+            <ul aria-expanded="false" class="collapse" [class.in]="showMenu === 'icons'">
+                <li><a routerLink="/fontawesome" [routerLinkActive]="['router-link-active']">Fontawesome</a></li>
+                <li><a routerLink="/simpleline" [routerLinkActive]="['router-link-active']">Simple Line Icons</a></li>
+                <li><a routerLink="/material" [routerLinkActive]="['router-link-active']">Material Icons</a></li>
+            </ul>
+        </li>  
+        <li [class.active]="showMenu === 'multilevel'"> 
+            <a class="has-arrow waves-effect waves-dark" (click)="addExpandClass('multilevel')" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Multi level dd</span></a>
+            <ul aria-expanded="false" class="collapse" [class.in]="showMenu === 'multilevel'">
+                <li><a href="#">item 1.1</a></li>
+                <li><a href="#">item 1.2</a></li>
+                <li [class.active]="showSubMenu === 'multilevel2'"> 
+                    <a class="has-arrow" href="javascript:void(0)" (click)="addActiveClass('multilevel2')" aria-expanded="false">Menu 1.3</a>
+                    <ul aria-expanded="false" class="collapse" [class.in]="showSubMenu === 'multilevel2'">
+                        <li><a href="#">item 1.3.1</a></li>
+                        <li><a href="#">item 1.3.2</a></li>
+                        <li><a href="#">item 1.3.3</a></li>
+                        <li><a href="#">item 1.3.4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">item 1.4</a></li>
+            </ul>
         </li>
       </ul>
-    </li>
-    <li class="m-t-40 p-20 upgrade-btn">
-      <a href="https://wrappixel.com/templates/elite-angular-admin/" target="_blank" class="btn btn-danger text-white">Upgrade To Pro</a>
-    </li>
-  </ul>
-</nav>
+    </nav>
+    <!-- End Sidebar navigation -->
+  </div>
+  <!-- End Sidebar scroll-->
+</aside>
+<!-- ============================================================== -->
+<!-- End Left Sidebar - style you can find in sidebar.scss  -->
+<!-- ============================================================== -->

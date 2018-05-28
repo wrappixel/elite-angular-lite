@@ -10,7 +10,6 @@ import 'rxjs/add/operator/mergeMap';
   templateUrl: './breadcrumb.component.html'
 })
 export class BreadcrumbComponent implements OnInit {
-    
 	@Input() layout;
     pageInfo;
     constructor(

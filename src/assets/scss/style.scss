@@ -1,7 +1,7 @@
 /*
 Template Name: Admin Press Admin
 Author: Themedesigner
-
+Email: niravjoshi87@gmail.com
 File: scss
 */
 /**
@@ -18,35 +18,20 @@ File: scss
  */
  
 @import 'variable'; 
-@import "../../../node_modules/bootstrap/scss/bootstrap";
 @import 'app';
 @import 'pages';
 @import 'sidebar';
 @import '../scss/icons/font-awesome/css/font-awesome.min.css';
 @import '../scss/icons/simple-line-icons/css/simple-line-icons.css';
+@import '../scss/icons/weather-icons/css/weather-icons.min.css';
+@import '../scss/icons/linea-icons/linea.css';
 @import '../scss/icons/themify-icons/themify-icons.css'; 
+@import '../scss/icons/flag-icon-css/flag-icon.min.css';
 @import "../scss/icons/material-design-iconic-font/css/materialdesignicons.min.css";
 @import 'widgets';
 @import 'grid';
-@import 'responsive';  
-@import 'spinners.scss'; 
-        
-@import 'theme-settings.scss'; 
-@import '../scss/animate.css';
-// color css
-
-@import 'colors/blue-dark';
-@import 'colors/default-dark';
-@import 'colors/gray-dark';
-@import 'colors/green-dark';
-@import 'colors/purple-dark';
-@import 'colors/megna-dark';
-@import 'colors/megna';
-@import 'colors/blue';
-@import 'colors/gray';
-@import 'colors/green';
-@import 'colors/purple';
-@import 'colors/default';
-
-// dark theme
-@import 'dark';
+@import 'responsive'; 
+@import 'material';
+@import '../css/spinners.css';
+@import '../css/animate.css';  
+  
