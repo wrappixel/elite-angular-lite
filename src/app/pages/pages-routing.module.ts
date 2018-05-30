@@ -19,12 +19,7 @@ const routes: Routes = [
             { path: 'rating', loadChildren: './component/rating/rating.module#RatingModule' },
             { path: 'tabs', loadChildren: './component/tabs/tabs.module#TabsModule' },
             { path: 'timepicker', loadChildren: './component/timepicker/timepicker.module#TimepickerModule' },
-            { path: 'typehead', loadChildren: './component/typehead/typehead.module#TypeheadModule' },
-            { path: 'fontawesome', loadChildren: './icons/fontawesome/fontawesome.module#FontawesomeModule' },
-            { path: 'simpleline', loadChildren: './icons/simpleline/simpleline.module#SimplelineIconModule' },
-            { path: 'material', loadChildren: './icons/material/material.module#MaterialComponentModule' },
-            { path: 'basicform', loadChildren: './form/basic/basic.module#BasicFormModule' },
-            { path: 'basictable', loadChildren: './table/basic/basic.module#BasicTableModule' }
+            { path: 'typehead', loadChildren: './component/typehead/typehead.module#TypeheadModule' }
         ]
     }
 ];

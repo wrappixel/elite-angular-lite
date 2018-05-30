@@ -24,7 +24,7 @@
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/scss/style.scss",
-              "src/assets/css/colors/default.css"
+              "src/assets/scss/colors/default-dark.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
