@@ -1,8 +1,8 @@
 import { Directive, HostListener } from '@angular/core';
 
 /**
-* Allows the sidebar to be toggled via click.
-*/
+ * Allows the sidebar to be toggled via click.
+ */
 /*@Directive({
   selector: '.sidebartoggler',
 })
@@ -21,13 +21,13 @@ export class SidebarToggleDirective {
 }*/
 
 @Directive({
-  selector: '.nav-toggler',
+  selector: '.nav-toggler'
 })
 export class MobileSidebarToggleDirective {
-  constructor() { }
+  constructor() {}
 
   @HostListener('click', ['$event'])
-  toggleOpen($event:any) {
+  toggleOpen($event: any) {
     $event.preventDefault();
     document.querySelector('body').classList.toggle('show-sidebar');
     document.querySelector('.nav-toggler i').classList.toggle('ti-menu');
@@ -36,16 +36,19 @@ export class MobileSidebarToggleDirective {
 }
 
 @Directive({
-  selector: '.right-side-toggle',
+  selector: '.right-side-toggle'
 })
 export class RightSidebarToggleDirective {
-  constructor() { }
+  constructor() {}
 
   @HostListener('click', ['$event'])
-  toggleOpen($event:any) {
+  toggleOpen($event: any) {
     $event.preventDefault();
     document.querySelector('.right-sidebar').classList.toggle('shw-rside');
-   }
+  }
 }
 
-export const SIDEBAR_TOGGLE_DIRECTIVES = [MobileSidebarToggleDirective,RightSidebarToggleDirective];
+export const SIDEBAR_TOGGLE_DIRECTIVES = [
+  MobileSidebarToggleDirective,
+  RightSidebarToggleDirective
+];

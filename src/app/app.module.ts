@@ -8,17 +8,18 @@ import { AuthGuard } from './shared/guard/auth.guard';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
+
 @NgModule({
-  declarations: [
-    AppComponent
+  declarations: [AppComponent],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
+  providers: [
+    AuthGuard,
+    {
+      provide: LocationStrategy,
+      useClass: PathLocationStrategy
+    }
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    AppRoutingModule
-  ],
-  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
