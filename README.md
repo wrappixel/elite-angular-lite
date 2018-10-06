@@ -1,7 +1,9 @@
 # AdminAngular
-
+<a href="https://wrappixel.com/templates/elite-angular-admin/"><img src="https://wrappixel.com/wp-content/uploads/edd/2018/02/elite-admin-angular-wp-previ.jpg" /></a><br/>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
 
+<h4>Check this Repo Live Demo</h4>
+<h3><a href="https://wrappixel.com/demos/angular-admin-templates/elite-angular-lite/">Demo</a></h3>
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
