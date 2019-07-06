@@ -25,7 +25,9 @@
                         "styles": [
                             "src/assets/scss/style.scss"
                         ],
-                        "scripts": []
+                        "scripts": [
+							"node_modules/pace-js/pace.min.js"
+						]
                     },
                     "configurations": {
                         "production": {

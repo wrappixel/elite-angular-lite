@@ -75,6 +75,10 @@
 		  transition: 0.5s ease-out;
 		}
 
+		.app-search .form-control:focus {
+			width: 250px;
+		}
+
 		.app-search .form-control::-moz-placeholder {
 		  color: $gray-800;
 		  opacity: 0.5;
