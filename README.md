@@ -1,9 +1,14 @@
-# AdminAngular
-<a href="https://wrappixel.com/templates/elite-angular-admin/"><img src="https://wrappixel.com/wp-content/uploads/edd/2018/02/elite-admin-angular-wp-previ.jpg" /></a><br/>
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
+# elite-admin-angular-lite
 
-<h4>Check this Repo Live Demo</h4>
-<h3><a href="https://wrappixel.com/demos/angular-admin-templates/elite-angular-lite/">Demo</a></h3>
+<h4><a href="https://wrappixel.com/demos/angular-admin-templates/elite-angular-lite/angular/">Free Version Demo Link</a></h4>
+
+## Pro Version
+
+<a href="https://www.wrappixel.com/templates/elite-angular-admin/"><img src="https://www.wrappixel.com/wp-content/uploads/2019/01/elite-admin-angular-nw-1.jpg"/></a><br/>
+
+<h4><a href="https://wrappixel.com/demos/angular-admin-templates/elite-angular/main/dashboard/dashboard1">Demo</a></h4>
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -14,7 +19,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
@@ -23,7 +28,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Further help
 
