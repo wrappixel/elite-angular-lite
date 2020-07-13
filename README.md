@@ -1,4 +1,4 @@
-# elite-admin-angular-lite
+# elite-admin-angular-lite 6,8,9 and 10
 
 <h4><a href="https://wrappixel.com/demos/angular-admin-templates/elite-angular-lite/angular/">Free Version Demo Link</a></h4>
 
@@ -7,7 +7,6 @@
 <a href="https://www.wrappixel.com/templates/elite-angular-admin/"><img src="https://www.wrappixel.com/wp-content/uploads/2019/01/elite-admin-angular-nw-1.jpg"/></a><br/>
 
 <h4><a href="https://wrappixel.com/demos/angular-admin-templates/elite-angular/main/dashboard/dashboard1">Demo</a></h4>
-
 
 ## Development server
 
