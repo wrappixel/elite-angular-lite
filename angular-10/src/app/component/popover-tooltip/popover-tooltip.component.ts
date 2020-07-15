@@ -1,4 +1,5 @@
 import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import { NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-ngbd-popover-tooltip',
@@ -23,11 +24,11 @@ export class NgbdPopTooltipComponent {
   greeting = {};
 
   name = 'World';
-  lastShown: Date;
-  lastHidden: Date;
-  @ViewChild('p', { static: true }) public popover;
+  lastShown: Date=new Date();
+  lastHidden: Date=new Date();
+  @ViewChild('p', { static: true }) public popover:any;
 
-  public changeGreeting(greeting: any): void {
+  public changeGreeting(greeting: NgbTooltip): void {
     const isOpen = this.popover.isOpen();
     this.popover.close();
     if (greeting !== this.greeting || !isOpen) {
@@ -36,7 +37,7 @@ export class NgbdPopTooltipComponent {
     }
   }
 
-  toggleWithGreeting(tooltip, greeting: string) {
+  toggleWithGreeting(tooltip:NgbTooltip, greeting: string) {
     if (tooltip.isOpen()) {
       tooltip.close();
     } else {
