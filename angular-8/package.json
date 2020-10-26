@@ -22,7 +22,7 @@
     "@ng-bootstrap/ng-bootstrap": "^4.2.1",
     "ngx-perfect-scrollbar": "6.1.0",
     "core-js": "^2.6.9",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "pace-js": "^1.0.2",
     "rxjs": "^6.5.2",
     "rxjs-compat": "^6.5.2",
