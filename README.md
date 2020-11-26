@@ -1,8 +1,8 @@
-<!-- # elite-admin-angular-lite 6,8,9 and 10 -->
+<!-- # elite-admin-angular-lite 6,8,9, 10 and 11 -->
 
 <!-- Heading of Template -->
 <h1>
-  <a href="https://wrappixel.com/demos/angular-admin-templates/elite-angular-lite/angular">Elite Angular 10 Admin Lite</a>
+  <a href="https://wrappixel.com/demos/angular-admin-templates/elite-angular-lite/angular">Elite Angular 11 Admin Lite</a>
 </h1>
 
 <!-- Main image of Template -->
