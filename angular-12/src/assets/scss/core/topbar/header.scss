@@ -160,9 +160,10 @@ Topbar Responsive
 @media (max-width: 767px) {
     .topbar .top-navbar {
         .navbar-collapse.show, .navbar-collapse.collapsing {
-            display: block;
+            display: flex;
             width: 100%;
             border-top: 1px solid $border-color;
+            background: #fb9678;
         }
         .navbar-nav {
             flex-direction: row;
@@ -187,5 +188,30 @@ Topbar Responsive
             }
         }
         
+    }
+}
+
+@media (max-width: 767px) {
+  .topbar .top-navbar {
+    .navbar-header {
+      position: fixed;
+      z-index: 10;
+    }
+    .navbar-collapse.show {
+      position: relative;
+      top: 60px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .user-profile {
+        display: none;
+    }
+    .sidebar-nav .nav-small-cap {
+        display: none !important;
+    }
+    .sidebar-nav ul .sidebar-item .sidebar-link {
+        padding: 14px 35px 14px 17px !important;
     }
 }

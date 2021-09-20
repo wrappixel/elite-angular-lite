@@ -14,7 +14,7 @@ export class FullComponent implements OnInit {
 	public config: PerfectScrollbarConfigInterface = {};
 
   constructor(public router: Router) {}
-
+  public isCollapsed = false;
   public innerWidth=0;
   public defaultSidebar='';
   public showMobileMenu = false;
